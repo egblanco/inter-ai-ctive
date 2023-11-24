@@ -1,7 +1,7 @@
 # ✍ Technical Test for AI Chat Application 
 - Frontend Developer Position
 
-## 👉 Objective: 
+## 👉 Objective
 Develop a chat application that enables users to communicate with AI models in
 real-time. The application should be built using Next.js, TypeScript, and TailwindCSS.
 
