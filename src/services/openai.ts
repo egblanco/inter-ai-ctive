@@ -24,7 +24,6 @@ export const conversation = async (
       `/api/openai/conversation?content=${lastInputValue}`
     );
     const data: Conversation = await response.json();
-    console.log(JSON.stringify(data));
     const { completion } = data;
     const gptMessage: Message = {
       id: completion?.id,
