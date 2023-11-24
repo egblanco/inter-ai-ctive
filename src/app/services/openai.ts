@@ -1,4 +1,6 @@
 import { Message } from "@/types/message";
+import OpenAI from "openai";
+import { USER_TYPE } from "../constants/common";
 
 export const conversation = async (
   lastInputValue: string,
@@ -18,7 +20,7 @@ export const conversation = async (
       id: completion?.id,
       created: completion?.created,
       content: completion?.choices[0]?.message?.content,
-      role: "gpt",
+      role: USER_TYPE.gpt,
     };
     setMessages([...actionMessages, gptMessage]);
   } catch (error) {
@@ -27,4 +29,12 @@ export const conversation = async (
     setLoading(false);
     setInputValue("");
   }
+};
+
+export const openai = () => {
+  const newOpenai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+    organization: process.env.ORGANIZATION_ID,
+  });
+  return newOpenai;
 };

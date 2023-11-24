@@ -1,19 +1,15 @@
-import OpenAI from "openai";
+import { MODEL_TYPE, USER_TYPE } from "@/app/constants/common";
+import { openai } from "@/app/services/openai";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const url = searchParams.get("url");
 
-  const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
-    organization: process.env.ORGANIZATION_ID,
-  });
-
-  const completion = await openai.chat.completions.create({
-    model: "gpt-4-vision-preview",
+  const completion = await openai().chat.completions.create({
+    model: MODEL_TYPE.gpt4VisionPreview,
     messages: [
       {
-        role: "user",
+        role: USER_TYPE.user,
         content: [
           { type: "text", text: "What’s in this image?" },
           {

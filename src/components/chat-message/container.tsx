@@ -12,6 +12,7 @@ import MessageBox from "./message";
 import MessageBoxStatus from "./message-box-status";
 import { TypeAnimation } from "react-type-animation";
 import { conversation } from "@/app/services/openai";
+import { USER_TYPE } from "@/app/constants/common";
 
 const Container = () => {
   const { setMessages, messages, name } = useEditMessages();
@@ -45,7 +46,7 @@ const Container = () => {
       id: v4(),
       created: currentDate,
       content: lastInputValue,
-      role: "user",
+      role: USER_TYPE.user,
     };
     actionMessages = [...messages, userMessage];
     setMessages([...actionMessages]);
