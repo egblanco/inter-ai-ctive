@@ -1,18 +1,12 @@
-import React, {
-  KeyboardEvent,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { KeyboardEvent, useEffect, useRef, useState } from "react";
 import useEditMessages from "@/contexts/chat-messages";
 import { v4 } from "uuid";
 import { Message } from "@/types/message";
 import MessageBox from "./message";
 import MessageBoxStatus from "./message-box-status";
 import { TypeAnimation } from "react-type-animation";
-import { conversation } from "@/app/services/openai";
-import { USER_TYPE } from "@/app/constants/common";
+import { conversation } from "@/services/openai";
+import { USER_TYPE } from "@/constants/common";
 
 const Container = () => {
   const { setMessages, messages, name } = useEditMessages();

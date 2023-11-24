@@ -1,7 +1,7 @@
 import useEditMessages from "@/contexts/chat-messages";
 import React from "react";
 import Tooltip from "../ui/tooltip";
-import { USER_TYPE } from "@/app/constants/common";
+import { USER_TYPE } from "@/constants/common";
 
 const MessageList = () => {
   const { messages } = useEditMessages();

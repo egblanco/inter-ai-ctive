@@ -5,7 +5,7 @@ import Header from "@/components/ui/header";
 import useEditMessages from "@/contexts/chat-messages";
 import { useMemo, useRef } from "react";
 import ActionCardDescription from "@/components/action-card-description";
-import { MODEL_TYPE } from "./constants/common";
+import { MODEL_TYPE } from "@/constants/common";
 
 export default function Home() {
   const { messages, setName, name } = useEditMessages();

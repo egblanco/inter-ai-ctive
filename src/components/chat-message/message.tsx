@@ -4,7 +4,7 @@ import React, { FC, useMemo } from "react";
 import classNames from "classnames";
 import { Message } from "@/types/message";
 import useEditMessages from "@/contexts/chat-messages";
-import { USER_TYPE } from "@/app/constants/common";
+import { USER_TYPE } from "@/constants/common";
 
 const MessageBox: FC<Message> = ({ id, content, created, role }) => {
   const { name } = useEditMessages();

@@ -1,9 +1,5 @@
 "use client";
-import React, {
-  MutableRefObject,
-  forwardRef,
-  useImperativeHandle,
-} from "react";
+import React, { MutableRefObject, forwardRef } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 

@@ -1,5 +1,5 @@
-import { MODEL_TYPE, USER_TYPE } from "@/app/constants/common";
-import { openai } from "@/app/services/openai";
+import { MODEL_TYPE, USER_TYPE } from "@/constants/common";
+import { openai } from "@/services/openai";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);

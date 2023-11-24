@@ -1,4 +1,4 @@
-import { USER_TYPE } from "@/app/constants/common";
+import { USER_TYPE } from "@/constants/common";
 import React from "react";
 
 export interface Message {
