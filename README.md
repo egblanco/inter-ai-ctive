@@ -40,3 +40,11 @@ The APP Router is used to manage routes as well as the implementation of interna
   
   📁 utils: Contains the horizontal functions used by different implementations such as working with dates and texts.
 
+  - ### Integrations
+  🤖 Opean AI:
+    
+    - Integration with Openai `gpt-4-turbo` models for message chat with questions and answers..
+    
+    - Integration with Openai `gpt-4-turbo` models for message chat with questions and answers..
+    
+
