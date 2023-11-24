@@ -1,6 +1,7 @@
-import { Message } from "@/types/message";
+import { Conversation, Message } from "@/types/message";
 import OpenAI from "openai";
 import { USER_TYPE } from "@/constants/common";
+import { VisionPreview } from "@/types/vision-preview";
 
 export const openai = () => {
   const newOpenai = new OpenAI({
@@ -22,7 +23,7 @@ export const conversation = async (
     const response = await fetch(
       `/api/openai/conversation?content=${lastInputValue}`
     );
-    const data = await response.json();
+    const data: Conversation = await response.json();
     const { completion } = data;
     const gptMessage: Message = {
       id: completion?.id,
@@ -49,8 +50,9 @@ export const fetchResponseVisionPreview = async (
     const response = await fetch(
       `/api/openai/vision-preview?url=${uploadedImage}`
     );
-    const data = await response.json();
-    setContent(data?.completion?.choices[0].message?.content);
+    const data: VisionPreview = await response.json();
+    const { completion } = data;
+    setContent(completion?.choices[0].message?.content);
   } catch (error) {
     console.error(error);
     setLoading(false);

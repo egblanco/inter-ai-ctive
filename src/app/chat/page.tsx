@@ -7,7 +7,7 @@ import BackAction from "@/components/back-action";
 
 const Chat = () => {
   return (
-    <body className="flex h-screen">
+    <div className="flex h-screen">
       <header className="fixed top-0 left-0 w-full bg-white border-b-2 border-gray-300 text-white p-4">
         <BackAction description="Chat with me" />
       </header>
@@ -23,7 +23,7 @@ const Chat = () => {
           <ChatContainer />
         </div>
       </main>
-    </body>
+    </div>
   );
 };
 
