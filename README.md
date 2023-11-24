@@ -26,6 +26,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Project structure 💻 
 
-- ### NextJs:
+- ### NextJs
+The APP Router is used to manage routes as well as the implementation of internal Services for integration with OpeanAi API and AWS.
+
+- ### File structure
 The APP Router is used to manage routes as well as the implementation of internal Services for integration with OpeanAi API and AWS.
 
