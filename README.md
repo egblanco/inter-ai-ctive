@@ -34,3 +34,9 @@ The APP Router is used to manage routes as well as the implementation of interna
     
   📁 components/ui: It contains all the components related to the visual identity of the project such as header, loaders, cards among others.
 
+  📁 contexts: Contains the domains of the contexts and their related implementations, such as chat-messages
+  
+  📁 types: Contains types related to data models such as messages and OpeanAi responses
+  
+  📁 utils: Contains the horizontal functions used by different implementations such as working with dates and texts.
+
