@@ -80,7 +80,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
  
    🖥️ AWS:
     
-    - Integration with S3 bucket to upload images that will be analized by  `gpt-4-vision-preview
+    - Integration with S3 bucket to upload images that will be analized by  `gpt-4-vision-preview`
  
 
 
