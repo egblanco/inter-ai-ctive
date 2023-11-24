@@ -14,7 +14,7 @@ const UploadImageForm = ({
   return (
     <div>
       <div className="pb-5 text-lg">
-        {name} Please upload an image and I will describe what I see ( ͡👁️ ͜ʖ ͡👁️)
+        {name}, please upload an image and I will describe what I see ( ͡👁️ ͜ʖ ͡👁️)
       </div>
       <form className="flex flex-col gap-4 rounded bg-gray-100 p-10 text-grey-900 ">
         <input

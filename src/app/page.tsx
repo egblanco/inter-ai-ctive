@@ -21,7 +21,7 @@ export default function Home() {
         <Header />
         <div className="flex">
           <div className="flex items-center h-10  rounded px-3 text-2xl text-gray-800">
-            {name.trim() && "Hola"}
+            {name.trim() && "Hello"}
           </div>
           <input
             className=" flex items-center h-10 w-full rounded px-3 text-2xl text-gray-800"
