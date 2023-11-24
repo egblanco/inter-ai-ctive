@@ -1,13 +1,14 @@
 "use client";
+
 import Card from "@/components/ui/card";
-import ChatWithMe from "@/components/action-card-description/chat-with-me";
-import WhatISee from "@/components/action-card-description/what-i-see";
 import Header from "@/components/ui/header";
 import useEditMessages from "@/contexts/chat-messages";
-import { useMemo } from "react";
+import { useMemo, useRef } from "react";
+import ActionCardDescription from "@/components/action-card-description";
 
 export default function Home() {
-  const { messages } = useEditMessages();
+  const { messages, setName, name } = useEditMessages();
+  const inputRef = useRef(null);
 
   const chatQty = useMemo(() => {
     return messages.length > 0 ? `(${messages.length / 2})✍` : "";
@@ -17,18 +18,49 @@ export default function Home() {
     <div className="p-5 flex h-screen flex-row justify-center items-center">
       <div className="flex flex-col space-y-10">
         <Header />
+        <div className="flex">
+          <div className="flex items-center h-10  rounded px-3 text-2xl text-gray-800">
+            {name.trim() && "Hola"}
+          </div>
+          <input
+            className=" flex items-center h-10 w-full rounded px-3 text-2xl text-gray-800"
+            type="text"
+            placeholder="Please type your name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            ref={inputRef}
+          />
+        </div>
         <Card
-          description={<ChatWithMe />}
+          description={
+            <ActionCardDescription
+              descriptionMethod="Text generation model"
+              model="gpt-4-turbo"
+            />
+          }
           src="/images/chat-robot.png"
           title={`Chat with me ${chatQty}`}
-          url="/conversation"
+          url="/chat"
+          name={name}
+          inputRef={inputRef}
         />
         <Card
-          description={<WhatISee />}
+          description={
+            <ActionCardDescription
+              descriptionMethod="Preview images model"
+              model="gpt-4-vision-preview"
+            />
+          }
           src="/images/robot-image.png"
           title="What I see?"
           url="/image-description"
+          name={name}
+          inputRef={inputRef}
         />
+        <div className="flex w-full justify-center text-xs">
+          Created by: Edgar{" "}
+          <span className="font-semibold">(OpenAi API - GPT) </span>
+        </div>
       </div>
     </div>
   );
