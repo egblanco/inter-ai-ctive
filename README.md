@@ -43,8 +43,8 @@ The APP Router is used to manage routes as well as the implementation of interna
 - ### Integrations
   🤖 Opean AI:
     
-    - Integration with Openai `gpt-4-turbo` models for message chat with questions and answers..
+    - Integration with Openai `gpt-4-turbo` models for message chat with questions and answers.
     
-    - Integration with Openai `gpt-4-turbo` models for message chat with questions and answers..
+    - Integration with Openai `gpt-4-vision-preview` models to analyze and describe uploaded images..
     
 
