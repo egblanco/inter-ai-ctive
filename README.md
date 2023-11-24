@@ -1,4 +1,25 @@
-## Technical Test for AI Chat Application - Frontend Developer Position 📝
+## ✍ Technical Test for AI Chat Application - Frontend Developer Position
+
+📝 Requirements:
+  
+  - ✅ Design a modern and user-friendly chat interface that includes a message area,
+user input box, and a space for AI responses.
+
+  - ✅Messages should include the sender's name, a timestamp, and support for both
+user and AI-generated messages.
+
+  - ✅Use appropriate state management techniques (e.g., React Context or Zustand) to
+manage the state of the chat and user messages.
+
+  - ✅Allow users to type messages in the text input area and implement a mechanism
+to submit messages when the user presses the Enter key.
+
+  - ✅When the user sends a message, simulates an AI response and displays it in the
+chat, you can use mock data or integrate with a simple AI service (e.g., a mock API
+endpoint).
+
+  - ✅Apply responsive styling to the chat interface to ensure a pleasant user experience
+on both desktop and mobile devices.
 
 ## Getting Started
 
@@ -54,6 +75,9 @@ The APP Router is used to manage routes as well as the implementation of interna
    🖥️ AWS:
     
     - Integration with S3 bucket to upload images that will be analized by  `gpt-4-vision-preview
+ 
+
+
     
 
 
