@@ -29,7 +29,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - ### NextJs Architecture
 The APP Router is used to manage routes as well as the implementation of internal Services for integration with OpeanAi API and AWS.
 
-- ### Spedific Architecture
+- ### Specific Architecture
   📁 components: It contains all the components related to the visual representation of general elements such as Lists, Images, Text Boxes, Chat Elements, among others.
     
   📁 components/ui: It contains all the components related to the visual identity of the project such as header, loaders, cards among others.
