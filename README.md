@@ -1,4 +1,5 @@
-# ✍ Technical Test for AI Chat Application - Frontend Developer Position
+# ✍ Technical Test for AI Chat Application 
+- Frontend Developer Position
 
 ## 👉 Objective: 
 Develop a chat application that enables users to communicate with AI models in
