@@ -1,11 +1,14 @@
 import useEditMessages from "@/contexts/chat-messages";
 import React from "react";
 import Tooltip from "../ui/tooltip";
+import { USER_TYPE } from "@/constants/common";
 
 const MessageList = () => {
   const { messages } = useEditMessages();
 
-  const userQuestions = messages.filter((message) => message.role === "user");
+  const userQuestions = messages.filter(
+    (message) => message.role === USER_TYPE.user
+  );
 
   return (
     <div>

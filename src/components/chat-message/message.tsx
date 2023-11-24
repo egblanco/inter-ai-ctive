@@ -4,26 +4,28 @@ import React, { FC, useMemo } from "react";
 import classNames from "classnames";
 import { Message } from "@/types/message";
 import useEditMessages from "@/contexts/chat-messages";
+import { USER_TYPE } from "@/constants/common";
 
 const MessageBox: FC<Message> = ({ id, content, created, role }) => {
   const { name } = useEditMessages();
   const messageTime = useMemo(
-    () => getDateFromTime(created * (role === "gpt" ? 1000 : 1)),
+    () => getDateFromTime(created * (role === USER_TYPE.gpt ? 1000 : 1)),
     [created, role]
   );
 
   const messageStyle = classNames({
-    "flex w-full justify-end": role === "user",
+    "flex w-full justify-end": role === USER_TYPE.user,
   });
   const contentStyle = classNames({
     "p-3 border-[1px] border-gray-900": true,
-    "bg-blue-600 text-white  rounded-l-lg rounded-br-lg": role === "user",
-    " text-gray-800 rounded-r-lg rounded-bl-lg": role === "gpt",
+    "bg-blue-600 text-white  rounded-l-lg rounded-br-lg":
+      role === USER_TYPE.user,
+    " text-gray-800 rounded-r-lg rounded-bl-lg": role === USER_TYPE.gpt,
   });
 
   return (
     <div className={`flex w-full mt-2 space-x-1 ${messageStyle}`}>
-      {role === "gpt" && (
+      {role === USER_TYPE.gpt && (
         <Image
           src="/images/chat-robot.png"
           alt="message"
@@ -35,7 +37,7 @@ const MessageBox: FC<Message> = ({ id, content, created, role }) => {
 
       <div>
         <div className={contentStyle}>
-          {role === "user" && (
+          {role === USER_TYPE.user && (
             <div className="text-xs pb-1 text-gray-300 font-semibold">
               {name || "😎"}
             </div>

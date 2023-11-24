@@ -5,6 +5,7 @@ import Header from "@/components/ui/header";
 import useEditMessages from "@/contexts/chat-messages";
 import { useMemo, useRef } from "react";
 import ActionCardDescription from "@/components/action-card-description";
+import { MODEL_TYPE } from "@/constants/common";
 
 export default function Home() {
   const { messages, setName, name } = useEditMessages();
@@ -35,7 +36,7 @@ export default function Home() {
           description={
             <ActionCardDescription
               descriptionMethod="Text generation model"
-              model="gpt-4-turbo"
+              model={MODEL_TYPE.gpt4}
             />
           }
           src="/images/chat-robot.png"
@@ -48,7 +49,7 @@ export default function Home() {
           description={
             <ActionCardDescription
               descriptionMethod="Preview images model"
-              model="gpt-4-vision-preview"
+              model={MODEL_TYPE.gpt4VisionPreview}
             />
           }
           src="/images/robot-image.png"
