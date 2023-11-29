@@ -44,7 +44,6 @@ const MessageBox: FC<Message> = ({ id, content, created, role }) => {
             </div>
           )}
           <Markdown text={content as string} />
-          {/*<div className="text-sm">{content}</div>*/}
         </div>
         <span className="text-xs text-gray-800 leading-none">
           {created === 0 ? "" : messageTime}
