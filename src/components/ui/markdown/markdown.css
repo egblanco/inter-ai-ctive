@@ -1,0 +1,48 @@
+.markdown > h3 {
+  background-color: #e2e8f0;
+  border-radius: 5px;
+  padding: 0.25rem;
+  margin: 2rem 0rem 1rem 0rem;
+}
+
+.markdown > ol {
+  list-style-type: none;
+  counter-reset: custom-counter;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.markdown > ol > li {
+  counter-increment: custom-counter;
+  margin-bottom: 8px; /* Adjust spacing between list items */
+  position: relative;
+}
+
+.markdown > ol > li::before {
+  content: counter(custom-counter); /* Display the incremented counter */
+  background: #cbd5e1;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: center;
+  padding: 4px 7px;
+  margin-right: 0.2505rem;
+}
+
+.markdown > pre {
+  background-color: #202123;
+  color: white;
+  border-radius: 5px;
+  padding: 0.25rem;
+  margin: 2rem 0rem 1rem 0rem;
+}
+
+.markdown > p > code {
+  font-size: 13px;
+  line-height: 1.4em;
+  background-color: unset;
+  background: rgba(237, 238, 241, 0.5);
+  border: 1px solid hsla(240, 9%, 71%, 0.2);
+  padding: 2px 4px;
+}

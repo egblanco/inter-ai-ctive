@@ -5,6 +5,7 @@ import classNames from "classnames";
 import { Message } from "@/types/message";
 import useEditMessages from "@/contexts/chat-messages";
 import { USER_TYPE } from "@/constants/common";
+import Markdown from "../ui/markdown";
 
 const MessageBox: FC<Message> = ({ id, content, created, role }) => {
   const { name } = useEditMessages();
@@ -42,7 +43,8 @@ const MessageBox: FC<Message> = ({ id, content, created, role }) => {
               {name || "😎"}
             </div>
           )}
-          <div className="text-sm">{content}</div>
+          <Markdown text={content as string} />
+          {/*<div className="text-sm">{content}</div>*/}
         </div>
         <span className="text-xs text-gray-800 leading-none">
           {created === 0 ? "" : messageTime}
