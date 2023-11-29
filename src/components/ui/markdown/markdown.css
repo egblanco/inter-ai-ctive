@@ -15,7 +15,6 @@
 .markdown > ol > li {
   counter-increment: custom-counter;
   margin-bottom: 8px; /* Adjust spacing between list items */
-  position: relative;
 }
 
 .markdown > ol > li::before {
