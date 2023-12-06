@@ -2,7 +2,7 @@ import React, { KeyboardEvent, useEffect, useRef, useState } from "react";
 import useEditMessages from "@/contexts/chat-messages";
 import { v4 } from "uuid";
 import { Message } from "@/types/message";
-import MessageBox from "./message";
+import MessageBox from "@/components/chat-message/message";
 import MessageBoxStatus from "./message-box-status";
 import { TypeAnimation } from "react-type-animation";
 import { conversation } from "@/services/openai";
